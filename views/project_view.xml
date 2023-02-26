@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+      <record model="ir.actions.act_window" id="jira_project_wiz_action">
+            <field name="name">Jira Connect</field>
+            <field name="res_model">odoo.jira.connector</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="jira_connector_wizard"/>
+            <field name="target">new</field>
+        </record>
+        <!--Menu Items-->
+        <menuitem name="Jira Connect" id="jira_connect_menu"
+                  parent="project.menu_main_pm" sequence="5"
+                  action="jira_project_wiz_action"/>
+  </data>
+</odoo>
